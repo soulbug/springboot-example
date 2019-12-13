@@ -1,0 +1,15 @@
+server:
+  port: 9800
+spring:
+  rabbitmq:
+    host: 192.168.2.160
+    port: 5672
+    username: ethan
+    password: ethan
+    listener:
+      simple:
+        acknowledge-mode: manual #设置消费端手动 ack
+        concurrency: 1 #消费者最小数量
+        max-concurrency: 10 #消费者最大数量
+        prefetch: 2 #在单
+    virtual-host: ethan
